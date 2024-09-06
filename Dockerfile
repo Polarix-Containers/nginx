@@ -2,8 +2,6 @@ FROM nginx:alpine
 
 LABEL maintainer="Thien Tran contact@tommytran.io"
 
-USER root
-
 RUN apk -U upgrade \
     && apk add libstdc++ \
     && rm -rf /var/cache/apk/*
