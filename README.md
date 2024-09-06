@@ -7,10 +7,5 @@
 
 ### Licensing
 - The code in this repository is licensed under the Apache License. 😇
-- These images are built on `docker.io/redis`, which is under the BSD license. Copyright to the base image belongs to Docker Inc.
-- Any image built by Polarix Containers is provided under the combination of license terms resulting from the use of individual packages.
-
-### Licensing
-- The code in this repository is licensed under the Apache License. 😇
 - These images are built on upstream images, which are under the BSD license. Copyright to the base images belongs to F5 Inc.
 - Any image built by Polarix Containers is provided under the combination of license terms resulting from the use of individual packages.
