@@ -7,6 +7,7 @@
 
 ### Sample Docker Compose config
 
+```
  nginx:
     container_name: nginx
     restart: unless-stopped
@@ -27,6 +28,7 @@
       - "no-new-privileges=true"
     cap_drop:
       - ALL
+```
 
 ### Licensing
 - The code in this repository is licensed under the Apache License. 😇
