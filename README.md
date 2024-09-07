@@ -13,7 +13,7 @@
     restart: unless-stopped
     image: ghcr.io/polarix-containers/nginx:slim-unprivileged
     ports:
-      - "8080:8080"
+      - "8080:8080/tcp"
     volumes:
       - "./nginx/default.conf.conf:/etc/nginx/conf.d/default.conf:Z,ro"
     user: "101:101"
