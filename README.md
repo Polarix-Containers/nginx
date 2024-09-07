@@ -14,10 +14,6 @@
     image: ghcr.io/polarix-containers/nginx:slim-unprivileged
     ports:
       - "8080:8080"
-    networks:
-      - specify
-      - specify-worker
-      - asset
     volumes:
       - "./nginx/default.conf.conf:/etc/nginx/conf.d/default.conf:Z,ro"
     user: "101:101"
