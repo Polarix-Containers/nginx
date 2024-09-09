@@ -1,4 +1,4 @@
-name: Build Unprivileged Slim
+name: Build Unprivileged Mainline Slim
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: polarix-containers/nginx
-  TAG: unprivileged-slim
+  TAG: unprivileged-mainline-slim
 
 jobs:
   build:

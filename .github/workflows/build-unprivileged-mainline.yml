@@ -15,7 +15,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: polarix-containers/nginx
-  TAG: unprivileged
+  TAG: unprivileged-mainline
 
 jobs:
   build:
