@@ -4,10 +4,10 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - unprivileged-slim
-    # Ignore Markdown files
-    paths-ignore:
-      - '**.md'
+      - main
+    paths:
+      - '.github/workflows/build-unprivileged-slim.yml'
+      - 'mainline-unprivileged-slim/**'
   schedule:
     # Build the image daily
     - cron: '15 0 * * *'
@@ -57,7 +57,7 @@ jobs:
         id: build-and-push
         uses: docker/build-push-action@v6
         with:
-          context: .
+          context: mainline-unprivileged-slim
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
@@ -85,7 +85,7 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: trivy-results.sarif
-          category: trivy
+          category: trivy-unprivileged-slim
 
   grype:
     name: Scan current image with Grype
@@ -97,7 +97,7 @@ jobs:
     steps:
       - name: Run Grype vulnerability scanner
         uses: anchore/scan-action@v4
-        id: grype
+        id: grype-unprivileged-slim
         with:
           image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
           fail-build: false
@@ -106,4 +106,4 @@ jobs:
         uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: ${{ steps.grype.outputs.sarif }}
-          category: grype
+          category: grype-unprivileged-slim
