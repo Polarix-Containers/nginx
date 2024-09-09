@@ -1,15 +1,6 @@
 # NGINX
 
-![Build, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-mainline.yml/badge.svg)
-![Build slim, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-mainline-slim.yml/badge.svg)
-<br>
-![Build unprivileged, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-unprivileged-mainline.yml/badge.svg)
-![Build unprivileged slim, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-unprivileged-mainline-slim.yml/badge.svg)
-<br>
-![Build stable, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-stable.yml/badge.svg)
-![Build stable slim, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-stable-slim.yml/badge.svg)
-<br>
-![Build unprivileged stable , scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-unprivileged-stable.yml/badge.svg)
+![Build unprivileged mainline slim, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-unprivileged-mainline-slim.yml/badge.svg)
 ![Build unprivileged stable slim, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-unprivileged-stable-slim.yml/badge.svg)
 
 ### Features & usage
