@@ -1,4 +1,4 @@
-FROM nginx:mainline-alpine
+FROM nginx:stable-alpine-slim
 
 LABEL maintainer="Thien Tran contact@tommytran.io"
 

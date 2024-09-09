@@ -4,6 +4,10 @@
 ![Build slim, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-slim.yml/badge.svg)
 ![Build unprivileged, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-unprivileged.yml/badge.svg)
 ![Build unprivileged slim, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-unprivileged-slim.yml/badge.svg)
+![Build stable, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-stable.yml/badge.svg)
+![Build stable slim, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-stable-slim.yml/badge.svg)
+![Build unprivileged stable , scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-unprivileged-stable.yml/badge.svg)
+![Build unprivileged stable slim, scan & push](https://github.com/Polarix-Containers/nginx/actions/workflows/build-unprivileged-stable-slim.yml/badge.svg)
 
 ### Features & usage
 - Built on upstream [NGINX images](https://github.com/nginxinc/docker-nginx), to be used as a drop-in replacement. Comes with regular rebuilds and hardened_malloc which are standard among Polarix containers.

@@ -1,4 +1,4 @@
-name: Build Slim
+name: Build Stable
 
 on:
   workflow_dispatch:
@@ -15,7 +15,7 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: polarix-containers/nginx
-  TAG: slim
+  TAG: stable
 
 jobs:
   build:
