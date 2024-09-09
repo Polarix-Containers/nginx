@@ -1,4 +1,4 @@
-name: Build Slim
+name: Build Mainline Slim
 
 on:
   workflow_dispatch:
