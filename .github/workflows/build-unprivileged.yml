@@ -97,7 +97,7 @@ jobs:
     steps:
       - name: Run Grype vulnerability scanner
         uses: anchore/scan-action@v4
-        id: grype-unprivileged
+        id: grype
         with:
           image: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.TAG }}
           fail-build: false
