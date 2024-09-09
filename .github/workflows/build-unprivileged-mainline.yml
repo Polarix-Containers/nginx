@@ -1,4 +1,4 @@
-name: Build Unprivileged
+name: Build Unprivileged Mainline
 
 on:
   workflow_dispatch:
@@ -6,8 +6,8 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/build-unprivileged.yml'
-      - 'mainline-unprivileged/**'
+      - '.github/workflows/build-unprivileged-mainline.yml'
+      - 'unprivileged-mainline/**'
   schedule:
     # Build the image daily
     - cron: '15 0 * * *'
@@ -52,12 +52,13 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             ${{ env.TAG }}
+            unprivileged
 
       - name: Build and push Docker image
         id: build-and-push
         uses: docker/build-push-action@v6
         with:
-          context: mainline-unprivileged
+          context: ${{ env.TAG }}
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}

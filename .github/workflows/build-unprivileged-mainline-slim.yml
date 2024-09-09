@@ -6,8 +6,8 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/build-unprivileged-slim.yml'
-      - 'mainline-unprivileged-slim/**'
+      - '.github/workflows/build-unprivileged-mainline-slim.yml'
+      - 'unprivileged-mainline-slim/**'
   schedule:
     # Build the image daily
     - cron: '15 0 * * *'
@@ -52,12 +52,13 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             ${{ env.TAG }}
+            unprivileged-slim
 
       - name: Build and push Docker image
         id: build-and-push
         uses: docker/build-push-action@v6
         with:
-          context: mainline-unprivileged-slim
+          context: ${{ env.TAG }}
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
