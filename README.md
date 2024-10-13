@@ -11,8 +11,8 @@
 ```
  nginx:
     container_name: nginx
-    restart: unless-stopped
     image: ghcr.io/polarix-containers/nginx:unprivileged-slim
+    restart: unless-stopped
     ports:
       - "8080:8080/tcp"
     volumes:
