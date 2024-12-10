@@ -5,6 +5,7 @@
 
 ### Features & usage
 - Built on upstream [NGINX images](https://github.com/nginxinc/docker-nginx), to be used as a drop-in replacement. Comes with regular rebuilds and hardened_malloc which are standard among Polarix containers.
+- Adds `ca-certificates` package for MTLS setups.
 
 ### Sample Docker Compose config
 
