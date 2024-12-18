@@ -22,7 +22,7 @@
     read_only: true
     tmpfs:
       - /var/cache/nginx:mode=0770,noexec,nosuid,nodev
-      - /tmp
+      - /tmp:mode=0770,noexec,nosuid,nodev
     security_opt:
       - "no-new-privileges=true"
     cap_drop:
