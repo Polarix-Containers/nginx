@@ -21,8 +21,8 @@
     user: "101:101"
     read_only: true
     tmpfs:
-      - /var/cache/nginx:mode=0770,noexec,nosuid,nodev
-      - /tmp:mode=0770,noexec,nosuid,nodev
+      - /var/cache/nginx:mode=0770,uid=101,gid=101,noexec,nosuid,nodev
+      - /tmp:mode=0770,uid=101,gid=101,noexec,nosuid,nodev
     security_opt:
       - "no-new-privileges=true"
     cap_drop:
