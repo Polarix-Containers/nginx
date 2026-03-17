@@ -1,4 +1,4 @@
-FROM ghcr.io/nginxinc/nginx-unprivileged:mainline-alpine
+FROM ghcr.io/nginx/nginx-unprivileged:alpine
 
 LABEL maintainer="Thien Tran contact@tommytran.io"
 
